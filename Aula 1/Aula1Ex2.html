@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Responsivo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .container {
+            width: 90%;
+            max-width: 800px; 
+            margin: 0 auto; /* Centraliza */
+            background: white;
+            
+        }
+        .menu {
+            display: block;
+            text-align: left;
+            background: #333;
+            padding: 10px;
+        }
+        .menu a {
+            color: white;           
+            padding: 10px;
+            display: inline-block;
+        }
+        /* Estilos para telas menores que 768px */
+        @media screen and (max-width: 768px) {
+            body {
+                background-color: lightgray;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <a href="#">Início</a>
+        <a href="#">Sobre</a>
+        <a href="#">Contato</a>
+    </div>
+    <div class="container">
+        <h1>Bem-vindo ao Meu Site</h1>
+        <p>Este é um exemplo de site simples com um container centralizado e um menu responsivo.</p>
+    </div>
+</body>
+</html>
