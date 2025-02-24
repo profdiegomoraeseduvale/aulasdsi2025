@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Responsivo</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estrutura principal */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Altura mínima da tela */
+        }
+
+        header {
+            background: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        main {
+            flex: 1; /* Ocupa todo o espaço disponível */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .box {
+            background: cornflowerblue;
+            padding: 20px;
+            width: 20%;            
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        /* 📱 Mobile (até 600px) */
+        @media (max-width: 600px) {
+            header {
+                font-size: 18px;
+                padding: 15px;
+            }
+
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .box {
+                width: 90%;
+            }
+        }
+
+        /* 📲 Tablets (601px a 1024px) */
+        @media (max-width: 1024px) and (min-width: 601px) {
+            .container {
+                flex-wrap: wrap;
+            }
+
+            .box {
+                width: 45%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>📱 Site Responsivo</header>
+
+    <main>
+        <div class="container">
+            <div class="box">📌 Seção 1</div>
+            <div class="box">📌 Seção 2</div>
+            <div class="box">📌 Seção 3</div>
+        </div>
+    </main>
+
+    <footer>© 2025 - Todos os direitos reservados</footer>
+
+</body>
+</html>
