@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    min-height: 100vh;
+  }
+
+  header, footer {
+    background: #222;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+
+  nav {
+    background: #444;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    text-align: center;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 300px);
+    gap: 20px;
+    padding: 20px;
+    background: #eee;
+  }
+
+  .photo {
+    background: white;
+    border: 2px solid #ccc;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* imagem cobre toda a área sem distorcer */
+  }
+
+  .photo:hover {
+    transform: scale(1.05);
+    border-color: #888;
+  }
+
+  /* Responsividade para telas pequenas */
+  @media (max-width: 768px) {
+    main {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+    }
+  }
