@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<title>Manipulação de JSON</title>
+</head>
+<body>
+<h1>Exemplo de JSON</h1>
+<button onclick="carregarDados()">Carregar Dados</button>
+<p id="resultado"></p>
+
+<script>
+function carregarDados() {
+const jsonData = '{"nome": "Carlos", "idade": 40}';
+const objeto = JSON.parse(jsonData);
+document.getElementById("resultado").innerText = `Nome: ${objeto.nome}, Idade: ${objeto.idade}`;
+}
+</script>
+
+</body>
+</html>
