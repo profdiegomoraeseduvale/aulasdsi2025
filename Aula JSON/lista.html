@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Clientes</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 80%;
+      margin: 20px auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px 12px;
+      text-align: left;
+    }
+    th {
+      background-color: #f4f4f4;
+    }
+    #listar-btn {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2 style="text-align: center;">Clientes</h2>
+
+  <button id="listar-btn">Listar Clientes</button>
+
+  <table id="tabela-clientes">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Endereço</th>
+        <th>Data de Nascimento</th>
+        <th>CPF</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script>
+    const clientes = [
+      {
+        nome: "João Silva",
+        endereco: "Rua das Flores, 123",
+        dataNascimento: "1985-03-15",
+        cpf: "123.456.789-00"
+      },
+      {
+        nome: "Maria Oliveira",
+        endereco: "Avenida Brasil, 456",
+        dataNascimento: "1990-07-22",
+        cpf: "987.654.321-11"
+      },
+      {
+        nome: "Carlos Souza",
+        endereco: "Travessa da Paz, 789",
+        dataNascimento: "1978-12-03",
+        cpf: "321.654.987-22"
+      }
+    ];
+
+    const tbody = document.querySelector("#tabela-clientes tbody");
+    const listarBtn = document.getElementById("listar-btn");
+
+    listarBtn.addEventListener("click", function () {
+      // Limpa a tabela antes de adicionar (evita duplicação)
+      tbody.innerHTML = "";
+
+      clientes.forEach(cliente => {
+        const row = document.createElement("tr");
+
+        row.innerHTML = `
+          <td>${cliente.nome}</td>
+          <td>${cliente.endereco}</td>
+          <td>${cliente.dataNascimento}</td>
+          <td>${cliente.cpf}</td>
+        `;
+
+        tbody.appendChild(row);
+      });
+    });
+  </script>
+</body>
+</html>
